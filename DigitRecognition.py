@@ -24,6 +24,13 @@ model.fit(x_train, y_train, epoch= 3 )
 
 model.save('unknown.model')
 
+model = tf.keras.models.load_models('handwritten.model')
+
+loss, accuracy = model.evaluate(x_test, y_test)
+
+print(loss)
+print(accuracy)
+
 
 
 
