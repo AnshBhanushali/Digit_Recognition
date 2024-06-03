@@ -16,6 +16,13 @@ model.add(tf.Keras.layers.Dense(128, activation='relu'))
 model.add(tf.Keras.layers.Dense(128, activation='relu'))
 model.add(tf.Keras.layers.Dense(10, activation='softmax'))
 
+model.compile(optimizer='adam', loss='sparse_categorial_crossentropy', metrics = ['accuracy'])
+
+model.fit(x_train, y_train)
+
+model.fit(x_train, y_train, epoch= 3 )
+
+model.save('unknown.model')
 
 
 
